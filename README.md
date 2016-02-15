@@ -7,12 +7,17 @@ The HSA-Debugger-GDB-Source-AMD repository includes
 - The AMD debug facilities library located in *amd/HwDbgFacilities/*. This library provides symbol processing for HSA kernels.
 
 # Build Steps
-1. Clone the HSA-Debugger-GDB-Source-AMD repository
+1. Install the required depedencies. On Ubuntu, you can execute the following following command
+```
+sudo apt-get install texinfo libncurses5 libncurses5-dev flex bison build-essential gcc-multilib g++-multilib python-dev
+```
+
+2. Clone the HSA-Debugger-GDB-Source-AMD repository
   * `git clone https://github.com/HSAFoundation/HSA-Debugger-GDB-Source-AMD.git`
-2. The gdb build has been modified with new files and configure settings to enable HSAIL debugging. The scripts below should be run to compile gdb.
+3. The gdb build has been modified with new files and configure settings to enable HSAIL debugging. The scripts below should be run to compile gdb.
 The *run_configure_hsail* script calls the GNU autotools configure with additional parameters.
   * `./run_configure_hsail.sh debug`
-3. The `run_configure_hsail.sh` script also generates the *run_make_hsail.sh* which sets environment variables for the Make step
+4. The `run_configure_hsail.sh` script also generates the *run_make_hsail.sh* which sets environment variables for the Make step
   * `./run_make_hsail.sh`
 
 # Running hsail-gdb

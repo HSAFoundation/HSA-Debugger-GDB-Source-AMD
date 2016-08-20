@@ -1,12 +1,14 @@
-# HSA-Debugger-GDB-Source-AMD
+##The HSA GDB AMD Project has been supercedded by ROCm - GDB Source Project located at https://github.com/RadeonOpenCompute/ROCm-GDB
+
+### HSA-Debugger-GDB-Source-AMD
 The HSA-Debugger-GDB-Source-AMD repository includes the source code for AMD hsail-gdb. Hsail-gdb is a modified version of GDB 7.8 that supports debugging HSAIL kernels on AMD platforms.
 
-# Package Contents
+### Package Contents
 The HSA-Debugger-GDB-Source-AMD repository includes
 - A modified version of gdb-7.8 to support HSAIL debugging. Note the main hsail specific files are located in *gdb-7.8/gdb* with the hsail-* prefix.
 - The AMD debug facilities library located in *amd/HwDbgFacilities/*. This library provides symbol processing for HSA kernels.
 
-# Build Steps
+### Build Steps
 1. Install the required depedencies. On Ubuntu, you can execute the following following command
 ```
 sudo apt-get install texinfo libncurses5 libncurses5-dev flex bison build-essential gcc-multilib g++-multilib python-dev
@@ -20,7 +22,7 @@ The *run_configure_hsail* script calls the GNU autotools configure with addition
 4. The `run_configure_hsail.sh` script also generates the *run_make_hsail.sh* which sets environment variables for the Make step
   * `./run_make_hsail.sh`
 
-# Running hsail-gdb
+### Running hsail-gdb
 The `run_make_hsail.sh` script builds the gdb executable.
 
 To run the hsail debugger, you'd also need to get the [AMD GPU Debug SDK](https://github.com/HSAFoundation/HSA-Debugger-Source-AMD).
